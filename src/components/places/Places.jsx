@@ -1,44 +1,62 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { PlacesCard } from "./PlacesCard";
-import Img1 from "../../assets/images/img1.jpg";
-import Img2 from "../../assets/images/img2.jpg";
-import Img3 from "../../assets/images/img3.jpg";
-import Img4 from "../../assets/images/img4.jpg";
+import Img1 from "../../assets/images/masaaimara.jpg";
+import Img2 from "../../assets/images/mountkenya.jpg";
+import Img3 from "../../assets/images/amboseli.jpg";
+import Img4 from "../../assets/images/lamuisland.jpg";
+import Img5 from "../../assets/images/nairobi.jpg";
+import Img6 from "../../assets/images/nakuru.jpg";
 
 const PlacesData = [
   {
-    img: Img1,
-    title: "Title",
-    location: "location",
-    description: "very long description very very long description it is vry long that you cant even see the whole description",
+    title: "Maasai Mara National Reserve",
+    description: "One of Africa's greatest wildlife reserves, famous for the annual wildebeest migration.",
+    location: "Narok County, Rift Valley Province",
+    type: "Wildlife",
     price: 10000,
-    type: "Type",
+    img: Img1
   },
   {
-    img: Img2,
-    title: "Title",
-    location: "location",
-    description: "very long description very very long description it is vry long that you cant even see the whole description",
+    "title": "Mount Kenya",
+    "description": "The second-highest mountain in Africa, offering stunning landscapes and diverse wildlife.",
+    "location": "Central Province",
+    "type": "Adventure",
     price: 10000,
-    type: "Type",
+    img: Img2
   },
   {
-    img: Img3,
-    title: "Title",
-    location: "location",
-    description: "very long description very very long description it is vry long that you cant even see the whole description",
+    "title": "Amboseli National Park",
+    "description": "Known for its large herds of elephants and views of Mount Kilimanjaro.",
+    "location": "Kajiado County, Rift Valley Province",
+    "type": "Safari",
     price: 10000,
-    type: "Type",
+    img: Img3
   },
   {
-    img: Img4,
-    title: "Title",
-    location: "location",
-    description: "very long description very very long description it is vry long that you cant even see the whole description",
+    "title": "Lamu Island",
+    "description": "A UNESCO World Heritage Site with well-preserved Swahili culture and beautiful beaches.",
+    "location": "Lamu County, Coast Province",
+    "type": "Culture",
     price: 10000,
-    type: "Type",
+    img: Img4
   },
+  {
+    "title": "Nairobi National Park",
+    "description": "A unique park located just outside Nairobi's bustling city center, home to a variety of wildlife.",
+    "location": "Nairobi County",
+    "type": "Urban Wildlife",
+    price: 10000,
+    img: Img5,
+  },
+  {
+    title: "Lake Nakuru National Park",
+    description: "Famous for its large population of flamingos and other bird species.",
+    location: "Nakuru County, Rift Valley Province",
+    type: "Bird Watching",
+    price: 10000,
+    img: Img6
+  }
 ];
 
 export const Places = ({handleOrderPopUp}) => {

@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Maasai Mara National Reserve",
+      "description": "One of Africa's greatest wildlife reserves, famous for the annual wildebeest migration.",
+      "location": "Narok County, Rift Valley Province",
+      "type": "National Park"
+    },
+    {
+      "title": "Mount Kenya",
+      "description": "The second-highest mountain in Africa, offering stunning landscapes and diverse wildlife.",
+      "location": "Central Province",
+      "type": "Mountain"
+    },
+    {
+      "title": "Amboseli National Park",
+      "description": "Known for its large herds of elephants and views of Mount Kilimanjaro.",
+      "location": "Kajiado County, Rift Valley Province",
+      "type": "National Park"
+    },
+    {
+      "title": "Lamu Island",
+      "description": "A UNESCO World Heritage Site with well-preserved Swahili culture and beautiful beaches.",
+      "location": "Lamu County, Coast Province",
+      "type": "Island"
+    },
+    {
+      "title": "Nairobi National Park",
+      "description": "A unique park located just outside Nairobi's bustling city center, home to a variety of wildlife.",
+      "location": "Nairobi County",
+      "type": "National Park"
+    },
+    {
+      "title": "Lake Nakuru National Park",
+      "description": "Famous for its large population of flamingos and other bird species.",
+      "location": "Nakuru County, Rift Valley Province",
+      "type": "National Park"
+    }
+  ]
+  

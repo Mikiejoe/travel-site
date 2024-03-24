@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import 'aos/dist/aos.css'
 import AOS from "aos"
 import { BrowserRouter, Route, Routes } from "react-router-dom";

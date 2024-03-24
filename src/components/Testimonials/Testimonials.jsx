@@ -15,6 +15,18 @@ const TestimonialData = [
     text: "very long description very very long description it is vry long that you cant even see the whole description",
   },
   {
+    id: 3,
+    img: Img3,
+    name: "Jane Doe",
+    text: "very long description very very long description it is vry long that you cant even see the whole description",
+  },
+  {
+    id: 4,
+    img: Img4,
+    name: "Jane Doe",
+    text: "very long description very very long description it is vry long that you cant even see the whole description",
+  },
+  {
     id: 2,
     img: Img2,
     name: "Jane Doe",
@@ -75,7 +87,7 @@ const Testimonials = () => {
             quidem error eos voluptas!
           </p>
         </div>
-        <div className="flex">
+        <Slider {...settings}>
           {TestimonialData.map(({ id, name, text, img }) => {
             return (
               <div key={id} className="bg-red-5 my-6">
@@ -94,7 +106,7 @@ const Testimonials = () => {
               </div>
             );
           })}
-        </div>
+        </Slider>
       </div>
     </div>
   );

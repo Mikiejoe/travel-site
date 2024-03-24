@@ -1,0 +1,15 @@
+/* eslint-disable no-unused-vars */
+import React from 'react'
+
+// eslint-disable-next-line react/prop-types
+export const BannerImg = ({img}) => {
+    const bgImage = {
+        backgroundImage: `url(${img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "400px"
+    }
+  return (
+    <div data-aos="zoom-in" className='h-[400px] w-full' style={bgImage}></div>
+  )
+}

@@ -2,10 +2,10 @@
 import React from "react";
 import Slider from "react-slick/lib/slider";
 
-import Img1 from "../../assets/images/img1.jpg";
-import Img2 from "../../assets/images/img2.jpg";
-import Img3 from "../../assets/images/img3.jpg";
-import Img4 from "../../assets/images/img4.jpg";
+import Img1 from "../../assets/images/img6.jpg";
+import Img2 from "../../assets/images/img9.jpg";
+import Img3 from "../../assets/images/amboseli.jpg";
+import Img4 from "../../assets/images/nakuru.jpg";
 
 const TestimonialData = [
   {

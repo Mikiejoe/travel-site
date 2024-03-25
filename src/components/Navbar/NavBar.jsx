@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaPhoneAlt } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
+import LogoImg from '../../assets/images/logo.png';
 
 const dropdownLinks = [
   {
@@ -32,7 +33,12 @@ export const NavBar = ({ handleOrderPopUp }) => {
           <div className="container py-[2px] sm:block hidden">
             <div className="flex justify-between py-[2px]">
               <p>20% off on your next booking</p>
-              <p>Mobile No. 208486876</p>
+              <div className="flex items-center justify-center gap-3 ">
+              <FaPhoneAlt />
+              <a href="tel:+254740920640">
+                <p>+254740920640</p>
+              </a>
+            </div>
             </div>
           </div>
         </div>
@@ -41,9 +47,10 @@ export const NavBar = ({ handleOrderPopUp }) => {
             {/* logo */}
             <div>
               <Link to="/" onClick={window.scrollTo(0, 0)}>
-                <h1 className="h-16 flex items-center font-bold text-primary">
-                  Logo
-                </h1>
+                <div className="flex h-10 items-center font-semibold justify-center text-primary">
+                  <img src={LogoImg} alt="" className="h-16 block"/>
+                  <h1>Finest Explorers</h1>
+                </div>
               </Link>
             </div>
             {/* navlinks */}

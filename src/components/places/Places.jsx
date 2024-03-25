@@ -61,7 +61,7 @@ const PlacesData = [
 
 export const Places = ({handleOrderPopUp}) => {
   return (
-    <div className="bg-gray-50 py-10 ">
+    <div className="bg-gray-50 pb-10 pt-5 ">
       <div data-aos="fade-up" className="container">
         <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
           Best Places to visit

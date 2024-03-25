@@ -6,7 +6,7 @@ import { IoLocationSharp } from 'react-icons/io5'
 export const PlacesCard = ({img,title,location,description,price,type,handleOrderPopUp}) => {
   return (
 
-    <div onClick={handleOrderPopUp} className='rounded-md shadow-lg transition-all duration-500 hover-shadow-xl cursor-pointer'>
+    <div onClick={handleOrderPopUp} className='rounded-md shadow-lg transition-al duration-500 hover-shadow-xl cursor-pointer'>
         <div className='overflow-hidden '>
             <img src={img} alt="" className='hover:rounded-t-md rounded-t-md mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110'/>
         </div>
@@ -21,9 +21,9 @@ export const PlacesCard = ({img,title,location,description,price,type,handleOrde
                 <div className="opacity-70">
                     <p>{type}</p>
                 </div>
-                <div>
-                    <p className='text-2xl font-bold '>Ksh {price}</p>
-                </div>
+                <button onClick={handleOrderPopUp} className="bg-gradient-to-r mt-2 from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary transition-all duration-600 text-white px-3 py-1 rounded-full">
+                Book Now
+              </button>
             </div>
         </div>
     </div>

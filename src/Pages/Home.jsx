@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React,{useState} from 'react'
-import BgImg from '../assets/images/img6.jpg'
+import BgImg from '../assets/images/bannerImg.jpg'
+// import BgImg from '../assets/images/page01.jpg'
 import Hero from '../components/Hero/Hero'
 import { Places } from '../components/places/Places'
 import { BannerImg } from '../components/BannerImg/BannerImg'
@@ -18,12 +19,12 @@ export const Home = () => {
   return (
     <>
     <div className=''>
-      <div className='relative h-[700px] '>
+      <div className='flex bg-blue-400 justify-center'>
         <img 
-        className='absolute right-0 top-0 h-[700px] w-full object-cover z-[-1] '
+        className='w-[90vw] h-[80vh] object-fit mt-[90px] '
         src={BgImg} 
         alt="" />
-        <Hero/>
+        {/* <Hero/> */}
       </div>
       <Places handleOrderPopUp={handleOrderPopUp}/>
       <BannerImg img={BgImage}/>

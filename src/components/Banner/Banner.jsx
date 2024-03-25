@@ -4,6 +4,7 @@ import BannerImg from "../../assets/images/img10.jpg";
 import { MdFlight, MdOutlineLocalHotel } from "react-icons/md";
 import { IoIosWifi } from "react-icons/io";
 import { IoFastFoodSharp } from "react-icons/io5";
+import { FaBusAlt } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -21,20 +22,19 @@ const Banner = () => {
             <div>
               <h1
                 data-aos="fade-up"
-                className="text-3xl font-bold sm:text-4xl "
+                className="text-3xl font-bold sm:text-4xl my-4 "
               >
-                Exlore Kenya with us!!
+                Explore Kenya with us!!
               </h1>
               <p data-aos="fade-right" className="text-sm text-gray-500 tracking-wide leading-8">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tempora odit dicta voluptas enim ipsum nostrum{" "}
+                {/* Explore the Ordinary and discover the extraordinary{" "} */}
               </p>
               <div>
                 <div data-aos="zoom-in" className="grid grid-cols-2 gap-6">
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
-                      <MdFlight className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                      <p>Flight</p>
+                      <FaBusAlt className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
+                      <p>Transport</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <MdOutlineLocalHotel className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />

@@ -11,6 +11,7 @@ import {
   FaMobile,
   FaMobileAlt,
   FaPhoneAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -79,6 +80,9 @@ export const Footer = () => {
                 </a>
                 <a href="#">
                   <FaLinkedin className="text-2xl" />
+                </a>
+                <a href="https://wa.me/254728531668?text=''">
+                  <FaWhatsapp className="text-2xl" />
                 </a>
               </div>
             </div>

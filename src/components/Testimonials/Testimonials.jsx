@@ -83,8 +83,7 @@ const Testimonials = () => {
           <h1 className="text-3xl font-bold">Testimonial</h1>
           <p className="text-xs text-gray-400">
             {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-            quidem error eos voluptas!
+            Don &apos; t forget to leave a review, Help us improve on your travel with us.
           </p>
         </div>
         <Slider {...settings}>

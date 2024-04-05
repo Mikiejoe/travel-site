@@ -42,7 +42,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
 
     const single = people == 1 ? "person" : "people";
 
-    const message = `Confirm booking for ${people} ${single} by ${name} with phone number ${phone} for ${amount}`;
+    const message = `Confirm booking for ${people} ${single} by ${name} with phone number ${phone} for Ksh:${amount}`;
     const subject = "Booking Confirmation";
     const response = await fetch(
       "https://emailsend-tkzx.onrender.com/send-email/",

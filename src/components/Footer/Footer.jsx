@@ -116,7 +116,7 @@ export const Footer = () => {
         <div>
           <div className="text-center py-5 border-t-2 border-gray-300/50 bg-primary">
             &copy; 2024 All Rigths reserved || made with love by{" "}
-            <a href="github.com/Mikiejoe" className="text-white">
+            <a href="https://www.github.com/Mikiejoe" target="blank" className="text-white">
               Joe
             </a>
           </div>

@@ -121,9 +121,9 @@ export const NavBar = ({ handleOrderPopUp }) => {
             </div>
 
             <div className="flex items-center gap-4">
-              <button onClick={handleOrderPopUp} className="bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary transition-all duration-600 text-white px-3 py-1 rounded-full">
+              {/* <button onClick={handleOrderPopUp} className="bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary transition-all duration-600 text-white px-3 py-1 rounded-full">
                 Book Now
-              </button>
+              </button> */}
 
               <div className="md:hidden block">
                 {showMenu ? (

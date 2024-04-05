@@ -3,6 +3,10 @@ import React, { useState } from "react";
 
 const Hero = () => {
   const [priceValue, setPriceValue] = useState(100);
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
     <div className="bg-black/20 h-full">

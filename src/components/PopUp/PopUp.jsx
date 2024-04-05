@@ -40,7 +40,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
     }
     console.log("Sending data");
 
-    const single = people === 1 ? "person" : "people";
+    const single = people == 1 ? "person" : "people";
 
     const message = `Confirm booking for ${people} ${single} by ${name} with phone number ${phone} for ${amount}`;
     const subject = "Booking Confirmation";

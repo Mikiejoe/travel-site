@@ -8,6 +8,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(350);
+  const [loading, setLoading] = useState(false);
 
   const onPeopleChange = (e) => {
     console.log(people);
@@ -30,6 +31,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
 
   const onDataSubmit = async () => {
     console.log(people, phone, name);
+    setLoading(true);
     const isValidInternationalNumber = /^\+254\d{9}$/.test(phone);
     const isValidLocalNumber = /^07\d{8}$/.test(phone);
     console.log(isValidInternationalNumber, isValidLocalNumber);
@@ -44,20 +46,28 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
 
     const message = `Confirm booking for ${people} ${single} by ${name} with phone number ${phone} for Ksh:${amount}`;
     const subject = "Booking Confirmation";
-    const response = await fetch(
-      "https://emailsend-tkzx.onrender.com/send-email/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message,
-          subject,
-        }),
-      }
-    );
+    try {
+      const response = await fetch(
+        "https://emailsend-tkzx.onrender.com/send-email/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message,
+            subject,
+          }),
+        }
+      );
+    } catch (error) {
+    alert("Error Confirming Booking");
+    }
     console.log(response);
+    setLoading(false);
+    setPhone("");
+    setPeople(1);
+    setName("");
     // console.log(data);
     if (response.status === 200) {
       alert("Booking Confirmed");
@@ -105,14 +115,18 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
                 onChange={onNameChange}
                 className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1"
               />
-              <p className="mb-4">Pay {amount} to this till number: <span className="text-lg text-bold text-red-500">9982177</span> </p>
+              <p className="mb-4">
+                Pay {amount} to this till number:{" "}
+                <span className="text-lg text-bold text-red-500">9982177</span>{" "}
+              </p>
               {/* <input type="text" placeholder="Address" className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1" /> */}
               <div className="flex items-center justify-center ">
                 <button
+                  disabled={loading}
                   onClick={onDataSubmit}
                   className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full"
                 >
-                  Book Now
+                  {loading ? "Submitting" : "Book Now"}
                 </button>
               </div>
             </div>

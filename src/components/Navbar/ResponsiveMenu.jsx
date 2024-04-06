@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LogoImg from '../../assets/images/logo.png';
 
 const navBarLinks = [
   {
@@ -31,10 +32,9 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
         {/* top */}
         <div>
           <div className="flex items-center justify-start gap-4">
-            <FaUserCircle size={50} className="text-gray-500" />
+            <img src={LogoImg} alt="" className="h-12 bg-gray-200 rounded-full" />
             <div className="text-gray-500">
-              <h1 className="">Hello Mike</h1>
-              <div className="text-sm text-slate-500">Premium</div>
+              <h1 className="">Finest Explorers</h1>
             </div>
           </div>
         </div>

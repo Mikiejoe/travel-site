@@ -60,20 +60,21 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
           }),
         }
       );
+      console.log(response);
+      setLoading(false);
+      setPhone("");
+      setPeople(1);
+      setName("");
+      // console.log(data);
+      if (response.status === 200) {
+        alert("Booking Confirmed");
+      } else {
+        alert("Error Confirming Booking");
+      }
     } catch (error) {
-    alert("Error Confirming Booking");
-    }
-    console.log(response);
-    setLoading(false);
-    setPhone("");
-    setPeople(1);
-    setName("");
-    // console.log(data);
-    if (response.status === 200) {
-      alert("Booking Confirmed");
-    } else {
       alert("Error Confirming Booking");
     }
+
     setOrderPopUp(false);
   };
 

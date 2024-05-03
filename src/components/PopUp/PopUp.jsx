@@ -14,7 +14,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
     console.log(people);
     if (e.target.value < 1) return setPeople(1);
     setPeople(e.target.value);
-    setAmount(e.target.value * 350);
+    setAmount(e.target.value * 1350);
   };
   const onPhoneChange = (e) => {
     const phoneNumber = e.target.value;
@@ -86,6 +86,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
             <div className="flex items-center justify-between">
               <div>
                 <h1>Book Now!!</h1>
+                <p>For the Old school edition..</p>
               </div>
               <div>
                 <IoCloseOutline

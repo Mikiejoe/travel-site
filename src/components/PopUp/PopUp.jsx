@@ -7,7 +7,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
   const [people, setPeople] = useState(1);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
-  const [amount, setAmount] = useState(350);
+  const [amount, setAmount] = useState(1350);
   const [loading, setLoading] = useState(false);
 
   const onPeopleChange = (e) => {
@@ -118,7 +118,7 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
               />
               <p className="mb-4">
                 Pay {amount} to this till number:{" "}
-                <span className="text-lg text-bold text-red-500">9982177</span>{" "}
+                <span className="text-lg text-bold text-red-500">8731122</span>{" "}
               </p>
               {/* <input type="text" placeholder="Address" className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1" /> */}
               <div className="flex items-center justify-center ">

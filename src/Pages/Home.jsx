@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import BgImg from "../assets/images/bannerImg.jpg";
+import BgImg from "../assets/images/bannerImg.jpeg";
 // import BgImg from '../assets/images/page01.jpg'
 import Hero from "../components/Hero/Hero";
 import { Places } from "../components/places/Places";

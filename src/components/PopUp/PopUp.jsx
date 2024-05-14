@@ -6,16 +6,12 @@ import { IoCloseOutline } from "react-icons/io5";
 const PopUp = ({ orderPopUp, setOrderPopUp }) => {
   const [people, setPeople] = useState(1);
   const [phone, setPhone] = useState("");
+  const [error,setError] = useState(false);
+  const [message, setMessage] = useState()
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(1350);
   const [loading, setLoading] = useState(false);
 
-  const onPeopleChange = (e) => {
-    console.log(people);
-    if (e.target.value < 1) return setPeople(1);
-    setPeople(e.target.value);
-    setAmount(e.target.value * 1350);
-  };
   const onPhoneChange = (e) => {
     const phoneNumber = e.target.value;
     const isInteger = Number.isInteger(Number(phoneNumber));
@@ -25,12 +21,37 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
     }
     setPhone(phoneNumber);
   };
+  const onPeopleChange = (e) => {
+    setError(false)
+    const persons = e.target.value;
+    console.log(persons)
+    const isInteger = Number.isInteger(Number(persons));
+    console.log(isInteger,"isinteger")
+    if(!isInteger || persons<1){
+      setError(true)
+
+    }
+    setPeople(persons);
+    setAmount(persons*1350)
+  };
   const onNameChange = (e) => {
     setName(e.target.value);
   };
 
   const onDataSubmit = async () => {
+    setError(false)
+    console.log(error, "error") 
     console.log(people, phone, name);
+    if (!name){
+      setMessage("Name is requirred!!")
+      return
+    }
+    if (people<1){
+      setError(true)
+      console.log(error, "error")
+      setLoading(false)
+      return
+    }
     setLoading(true);
     const isValidInternationalNumber = /^\+254\d{9}$/.test(phone);
     const isValidLocalNumber = /^07\d{8}$/.test(phone);
@@ -38,6 +59,8 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
 
     if (!isValidInternationalNumber && !isValidLocalNumber) {
       // Handle invalid phone number
+      setMessage("invalid phone number")
+      setLoading(false)
       return;
     }
     console.log("Sending data");
@@ -73,16 +96,28 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
       }
     } catch (error) {
       alert("Error Confirming Booking");
+    }finally{
+      setLoading(false)
+      setError(false)
+      setOrderPopUp(false)
+      setMessage(null)
     }
 
     setOrderPopUp(false);
   };
+  const setNull = ()=>{
+    setLoading(false);
+      setPhone("");
+      setPeople(1);
+      setName("");
+      setOrderPopUp(false);
+  }
 
   return (
     <>
       {orderPopUp && (
         <div className="h-screen w-screen fixed top-0 left-0 bg-black/50 z-50 backdrop-blur-sm">
-          <div className="fixed top-1/4 left-1/2 -translate-x-1/2 bg-white p-4 rounded-md w-[300px]">
+          <div className="fixed top-[20%] left-1/2 -translate-x-1/2 bg-white p-4 rounded-md w-[300px]">
             <div className="flex items-center justify-between">
               <div>
                 <h1>Book Now!!</h1>
@@ -91,19 +126,25 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
               <div>
                 <IoCloseOutline
                   className="text-2xl cursor-pointer"
-                  onClick={() => setOrderPopUp(false)}
+                  onClick={setNull}
                 />
               </div>
             </div>
+            <div>
+              <p className="text-sm text-red-500">{message}</p>
+              {error ? <p className="text-sm text-red-500">Number of people must be a whole number and not be less than 1</p>:<p></p>}
+            </div>
             <div className="mt-4">
+              
+              
+              <label>Name</label>
               <input
-                type="number"
-                placeholder="Number of People"
-                value={people}
-                onChange={onPeopleChange}
-                min={1}
+                type="text"
+                placeholder="Name"
+                onChange={onNameChange}
                 className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1"
               />
+              <label>Phone Number</label>
               <input
                 type="tel"
                 placeholder="Phone"
@@ -111,10 +152,13 @@ const PopUp = ({ orderPopUp, setOrderPopUp }) => {
                 value={phone}
                 className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1"
               />
+              <label>Number of people</label>
               <input
-                type="text"
-                placeholder="Name"
-                onChange={onNameChange}
+                type="number"
+                placeholder="Number of People"
+                min={1}
+                value={people}
+                onChange={onPeopleChange}
                 className="w-full rounded-full border border-gray-300 mb-4 px-2 py-1"
               />
               <p className="mb-4">
